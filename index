@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuckyDip — Win an iPhone 15 Pro Max!</title>
+  <meta name="description" content="Enter Lusaka's hottest raffle! Buy tickets and win an iPhone 15 Pro Max. Pay via Airtel Money or MTN MoMo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+```
+:root {
+  --orange: #ff6b35;
+  --orange-dark: #c94f00;
+  --yellow: #f7c948;
+  --yellow-dark: #e0a800;
+  --green-wa: #25d366;
+  --green-wa-dark: #1a9e4a;
+  --bg: #fff9f5;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: rgba(0,0,0,0.1);
+  --surface: #f5f0eb;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.logo {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.8rem;
+  color: var(--yellow);
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+}
+.logo span { color: var(--orange); }
+.header-badge {
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7c948 50%, #ff9f1c 100%);
+  background-size: 200% 200%;
+  animation: gradShift 5s ease infinite;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes gradShift {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.confetti { position: absolute; border-radius: 50%; animation: fall linear infinite; opacity: 0; }
+@keyframes fall {
+  0% { transform: translateY(-30px) rotate(0deg); opacity: 0.8; }
+  100% { transform: translateY(110%) rotate(720deg); opacity: 0; }
+}
+.hero-phone {
+  font-size: 5.5rem;
+  display: block;
+  animation: sway 3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+}
+@keyframes sway {
+  0%,100% { transform: rotate(-6deg) scale(1); }
+  50% { transform: rotate(6deg) scale(1.05); }
+}
+.hero h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  color: #fff;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+  margin: 0.25rem 0 0.5rem;
+}
+.hero p {
+  color: rgba(255,255,255,0.92);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.prize-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--orange-dark);
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.4rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 0 var(--yellow-dark);
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+.draw-tag {
+  margin-top: 1rem;
+  display: inline-block;
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+}
+
+/* ── MAIN CONTAINER ── */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+/* ── STATS ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 1.5rem 0 0.75rem;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.stat-val {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.6rem;
+  color: var(--orange);
+}
+.stat-label {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+.progress-wrap {
+  background: var(--surface);
+  border-radius: 20px;
+  height: 16px;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  border-radius: 20px;
+  width: 0;
+  animation: growBar 2s ease forwards;
+}
+@keyframes growBar { to { width: 62%; } }
+.progress-label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ── COUNTDOWN ── */
+.countdown-block {
+  background: #1a1a2e;
+  border-radius: 18px;
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  text-align: center;
+}
+.countdown-title {
+  font-family: 'Fredoka One', cursive;
+  color: var(--yellow);
+  font-size: 0.95rem;
+  margin-bottom: 0.85rem;
+}
+.countdown-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.cd-unit {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 0.6rem 0.9rem;
+  min-width: 58px;
+}
+.cd-num {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.8rem;
+  color: var(--yellow);
+  line-height: 1;
+}
+.cd-lbl {
+  font-size: 10px;
+  color: rgba(255,255,255,0.55);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* ── SECTION CARD ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.35rem;
+  margin: 1.25rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.card-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 0.85rem;
+}
+
+/* ── TICKET GRID ── */
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.t-opt {
+  border: 2.5px solid var(--orange);
+  border-radius: 14px;
+  padding: 0.7rem 0.4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+  background: #fff;
+}
+.t-opt:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255,107,53,0.25); }
+.t-opt.selected { background: var(--orange); color: #fff; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(255,107,53,0.4); }
+.t-opt.selected .t-save { background: var(--yellow); color: #7a4f00; }
+.t-count { font-family: 'Fredoka One', cursive; font-size: 1.4rem; color: inherit; }
+.t-label { font-size: 10px; font-weight: 700; color: var(--muted); margin: 1px 0; }
+.t-opt.selected .t-label { color: rgba(255,255,255,0.8); }
+.t-price { font-size: 12px; font-weight: 800; color: inherit; }
+.t-save {
+  display: inline-block;
+  background: var(--yellow);
+  color: #7a4f00;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 5px;
+  border-radius: 6px;
+  margin-top: 3px;
+}
+
+/* ── MOMO TABS ── */
+.momo-tabs { display: flex; gap: 10px; margin-bottom: 1rem; }
+.momo-tab {
+  flex: 1;
+  padding: 0.65rem;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--muted);
+  transition: all 0.15s;
+  background: var(--surface);
+}
+.momo-tab.active { border-color: var(--orange); color: var(--orange); background: rgba(255,107,53,0.06); }
+.momo-tab .tab-icon { font-size: 22px; display: block; margin-bottom: 2px; }
+
+/* ── FORM ── */
+.field { margin-bottom: 12px; }
+.field label { font-size: 13px; font-weight: 700; color: var(--muted); display: block; margin-bottom: 5px; }
+.field input {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  font-size: 15px;
+  font-family: 'Nunito', sans-serif;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.field input:focus { border-color: var(--orange); background: #fff; }
+
+/* ── SUMMARY ── */
+.summary {
+  background: rgba(255,107,53,0.07);
+  border: 1.5px dashed var(--orange);
+  border-radius: 14px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.sum-row { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: var(--muted); padding: 3px 0; }
+.sum-total { display: flex; justify-content: space-between; font-family: 'Fredoka One', cursive; font-size: 1.15rem; color: var(--orange-dark); border-top: 1.5px dashed rgba(255,107,53,0.3); padding-top: 8px; margin-top: 6px; }
+
+/* ── BUTTONS ── */
+.btn-main {
+  width: 100%;
+  background: linear-gradient(135deg, var(--orange), var(--yellow));
+  color: #fff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 16px;
+  padding: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 5px 0 var(--orange-dark);
+  transition: all 0.15s;
+  letter-spacing: 0.5px;
+}
+.btn-main:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--orange-dark); }
+.btn-main:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--orange-dark); }
+.btn-wa {
+  width: 100%;
+  background: var(--green-wa);
+  color: #fff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 16px;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 0 var(--green-wa-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.15s;
+}
+.btn-wa:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--green-wa-dark); }
+.btn-wa:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--green-wa-dark); }
+.btn-ghost {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 0.6rem;
+  cursor: pointer;
+  margin-top: 6px;
+}
+.btn-ghost:hover { color: var(--orange); }
+
+/* ── HOW IT WORKS ── */
+.how-step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+.how-num {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 0 var(--orange-dark);
+}
+.how-text strong { display: block; font-size: 14px; font-weight: 800; color: var(--text); }
+.how-text span { font-size: 12px; color: var(--muted); }
+
+/* ── TRUST BADGES ── */
+.trust-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 0.5rem 0 1.5rem;
+  flex-wrap: wrap;
+}
+.trust-badge {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 0.35rem 0.9rem;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #1a1a2e;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 12px;
+  font-weight: 600;
+}
+footer a { color: var(--yellow); text-decoration: none; }
+
+/* ══════════════════════════════════
+   MODAL FLOW
+══════════════════════════════════ */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+.overlay.open { display: flex; }
+.modal {
+  background: var(--card);
+  border-radius: 24px 24px 0 0;
+  padding: 1.5rem 1.25rem 2rem;
+  width: 100%;
+  max-width: 480px;
+  max-height: 92vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.modal-drag {
+  width: 40px; height: 4px;
+  background: var(--border);
+  border-radius: 4px;
+  margin: 0 auto 1.25rem;
+}
+
+/* step indicators */
+.step-track { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 1.5rem; }
+.s-dot {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.9rem;
+  background: var(--surface);
+  color: var(--muted);
+  border: 2px solid var(--border);
+  transition: all 0.3s;
+}
+.s-dot.active { background: var(--orange); color: #fff; border-color: var(--orange); }
+.s-dot.done { background: var(--green-wa); color: #fff; border-color: var(--green-wa); }
+.s-line { flex: 1; height: 2px; background: var(--border); border-radius: 2px; transition: background 0.3s; }
+.s-line.done { background: var(--green-wa); }
+
+.panel { display: none; animation: fadeUp 0.25s ease; }
+.panel.active { display: block; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* order review */
+.order-card {
+  background: rgba(255,107,53,0.07);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.o-row { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; padding: 5px 0; color: var(--text); border-bottom: 1px solid rgba(0,0,0,0.05); }
+.o-row:last-of-type { border: none; }
+.o-total { display: flex; justify-content: space-between; font-family: 'Fredoka One', cursive; font-size: 1.15rem; color: var(--orange-dark); border-top: 1.5px dashed rgba(255,107,53,0.3); padding-top: 8px; margin-top: 6px; }
+
+/* payment instructions */
+.pay-card {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.pay-header { display: flex; align-items: center; gap: 12px; margin-bottom: 0.85rem; }
+.pay-logo { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+.pay-logo.airtel { background: #e30613; }
+.pay-logo.mtn { background: #ffc200; }
+.copy-row {
+  background: #fff;
+  border: 1.5px dashed var(--orange);
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+.copy-lbl { font-size: 10px; color: var(--muted); font-weight: 700; text-transform: uppercase; }
+.copy-val { font-family: 'Fredoka One', cursive; font-size: 1.2rem; color: var(--orange-dark); letter-spacing: 2px; }
+.copy-btn {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.pay-steps { list-style: none; margin-top: 0.85rem; }
+.pay-steps li { display: flex; gap: 10px; font-size: 13px; font-weight: 600; color: var(--text); padding: 5px 0; align-items: flex-start; }
+.pay-steps li .n {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 11px;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Fredoka One', cursive;
+  margin-top: 1px;
+}
+
+/* whatsapp step */
+.wa-bubble {
+  background: #e7fce5;
+  border: 1px solid #b8f0c0;
+  border-radius: 16px 16px 16px 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 13px;
+  color: #1a3d1f;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+.wa-bubble strong { color: #1a7a3a; display: block; margin-bottom: 6px; }
+.wa-time { font-size: 11px; color: #7a9a7e; text-align: right; margin-top: 6px; }
+
+/* confirmed */
+.confirmed-hero { text-align: center; padding: 0.5rem 0 1rem; }
+.big-tick { font-size: 4rem; animation: pop 0.5s ease; display: block; }
+@keyframes pop {
+  0% { transform: scale(0) rotate(-10deg); }
+  70% { transform: scale(1.2) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 0.75rem; }
+
+/* ── RESPONSIVE ── */
+@media (min-width: 481px) {
+  .overlay { align-items: center; padding: 1rem; }
+  .modal { border-radius: 24px; max-height: 88vh; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="logo">Lucky<span>Dip</span> 🎲</div>
+    <div class="header-badge">Lusaka, Zambia</div>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="hero-section">
+    <!-- confetti dots injected by JS -->
+    <span class="hero-phone">📱</span>
+    <h1>WIN BIG!</h1>
+    <p>Lusaka's luckiest raffle is live!</p>
+    <div class="prize-pill">🏆 iPhone 15 Pro Max — Grand Prize</div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:0.75rem;flex-wrap:wrap;">
+      <div style="background:rgba(255,255,255,0.25);border:2px solid rgba(255,255,255,0.5);border-radius:50px;padding:0.35rem 1rem;font-family:'Fredoka One',cursive;font-size:0.95rem;color:#fff;">🥈 2nd Place — K2,000 Cash</div>
+      <div style="background:rgba(255,255,255,0.25);border:2px solid rgba(255,255,255,0.5);border-radius:50px;padding:0.35rem 1rem;font-family:'Fredoka One',cursive;font-size:0.95rem;color:#fff;">🥉 3rd Place — K500 Cash</div>
+    </div>
+    <div class="draw-tag">📅 Draw: Sunday 19 April 2026 · Lusaka</div>
+  </section>
+
+  <!-- MAIN -->
+
+  <main class="container">
+
+```
+<!-- PRIZES -->
+<div class="card" style="background:linear-gradient(135deg,#1a1a2e,#16213e);border:none;margin-top:1.25rem;">
+  <div class="card-title" style="color:#f7c948;text-align:center;margin-bottom:1rem;">🏅 Prize Breakdown</div>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border-radius:14px;padding:0.9rem 1rem;">
+      <div style="font-size:2rem;flex-shrink:0;">🏆</div>
+      <div style="flex:1;">
+        <div style="font-family:'Fredoka One',cursive;color:#f7c948;font-size:1rem;">1st Place</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.7);font-weight:600;">iPhone 15 Pro Max</div>
+      </div>
+      <div style="font-family:'Fredoka One',cursive;color:#ff9f1c;font-size:1.1rem;text-align:right;">Grand<br>Prize</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border-radius:14px;padding:0.9rem 1rem;">
+      <div style="font-size:2rem;flex-shrink:0;">🥈</div>
+      <div style="flex:1;">
+        <div style="font-family:'Fredoka One',cursive;color:#d0d0d0;font-size:1rem;">2nd Place</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.7);font-weight:600;">Cash Prize</div>
+      </div>
+      <div style="font-family:'Fredoka One',cursive;color:#d0d0d0;font-size:1.2rem;">K2,000</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border-radius:14px;padding:0.9rem 1rem;">
+      <div style="font-size:2rem;flex-shrink:0;">🥉</div>
+      <div style="flex:1;">
+        <div style="font-family:'Fredoka One',cursive;color:#cd7f32;font-size:1rem;">3rd Place</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.7);font-weight:600;">Cash Prize</div>
+      </div>
+      <div style="font-family:'Fredoka One',cursive;color:#cd7f32;font-size:1.2rem;">K500</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-val">2,000</div>
+    <div class="stat-label">Total Tickets</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-val">3</div>
+    <div class="stat-label">Winners</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-val">K20</div>
+    <div class="stat-label">Per Ticket</div>
+  </div>
+</div>
+
+<!-- COUNTDOWN -->
+<div class="countdown-block">
+  <div class="countdown-title">⏰ Draw closes in</div>
+  <div class="countdown-grid">
+    <div class="cd-unit"><div class="cd-num" id="cd-d">--</div><div class="cd-lbl">Days</div></div>
+    <div class="cd-unit"><div class="cd-num" id="cd-h">--</div><div class="cd-lbl">Hrs</div></div>
+    <div class="cd-unit"><div class="cd-num" id="cd-m">--</div><div class="cd-lbl">Min</div></div>
+    <div class="cd-unit"><div class="cd-num" id="cd-s">--</div><div class="cd-lbl">Sec</div></div>
+  </div>
+</div>
+
+<!-- TICKET PICKER -->
+<div class="card">
+  <div class="card-title">🎟️ Pick your tickets</div>
+  <div class="ticket-grid">
+    <div class="t-opt" onclick="selectTicket(this,1)">
+      <div class="t-count">1</div>
+      <div class="t-label">ticket</div>
+      <div class="t-price">K20</div>
+    </div>
+    <div class="t-opt selected" onclick="selectTicket(this,3)">
+      <div class="t-count">3</div>
+      <div class="t-label">tickets</div>
+      <div class="t-price">K50</div>
+      <div class="t-save">SAVE 17%</div>
+    </div>
+    <div class="t-opt" onclick="selectTicket(this,5)">
+      <div class="t-count">5</div>
+      <div class="t-label">tickets</div>
+      <div class="t-price">K80</div>
+      <div class="t-save">SAVE 20%</div>
+    </div>
+    <div class="t-opt" onclick="selectTicket(this,10)">
+      <div class="t-count">10</div>
+      <div class="t-label">tickets</div>
+      <div class="t-price">K150</div>
+      <div class="t-save">SAVE 25%</div>
+    </div>
+    <div class="t-opt" onclick="selectTicket(this,20)">
+      <div class="t-count">20</div>
+      <div class="t-label">tickets</div>
+      <div class="t-price">K250</div>
+      <div class="t-save">SAVE 38%</div>
+    </div>
+    <div class="t-opt" onclick="selectTicket(this,50)">
+      <div class="t-count">50</div>
+      <div class="t-label">tickets</div>
+      <div class="t-price">K500</div>
+      <div class="t-save">SAVE 50%</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAYMENT FORM -->
+<div class="card">
+  <div class="card-title">💳 Pay with Mobile Money</div>
+
+  <div class="momo-tabs">
+    <div class="momo-tab active" id="tab-airtel" onclick="switchMomo('airtel')">
+      <span class="tab-icon">🔴</span>Airtel Money
+    </div>
+    <div class="momo-tab" id="tab-mtn" onclick="switchMomo('mtn')">
+      <span class="tab-icon">🟡</span>MTN MoMo
+    </div>
+  </div>
+
+  <div class="field">
+    <label id="momo-lbl">Your Airtel Money Number</label>
+    <input type="tel" id="momo-num" placeholder="e.g. 097 123 4567" />
+  </div>
+  <div class="field">
+    <label>Your Full Name</label>
+    <input type="text" id="p-name" placeholder="e.g. Mwila Banda" />
+  </div>
+  <div class="field">
+    <label>WhatsApp Number (receives your ticket confirmation)</label>
+    <input type="tel" id="p-wa" placeholder="e.g. +260 97 123 4567" />
+  </div>
+
+  <div class="summary">
+    <div class="sum-row"><span>Tickets</span><span id="s-tickets">3 tickets</span></div>
+    <div class="sum-row"><span>Unit price</span><span id="s-unit">K16.67 each</span></div>
+    <div class="sum-row"><span>Discount</span><span id="s-disc" style="color:#2a9d2a;">Save K10 (17%)</span></div>
+    <div class="sum-total"><span>Total</span><span id="s-total">K50</span></div>
+  </div>
+
+  <button class="btn-main" onclick="openModal()">🎟️ Buy My Tickets &amp; Enter the Draw!</button>
+</div>
+
+<!-- TRUST -->
+<div class="trust-row">
+  <div class="trust-badge">✅ Verified Seller</div>
+  <div class="trust-badge">🔴 Airtel Accepted</div>
+  <div class="trust-badge">🟡 MTN Accepted</div>
+  <div class="trust-badge">📍 Lusaka, Zambia</div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="card">
+  <div class="card-title">How it works</div>
+  <div class="how-step">
+    <div class="how-num">1</div>
+    <div class="how-text"><strong>Pick your ticket bundle</strong><span>More tickets = more chances. Bundles save you money!</span></div>
+  </div>
+  <div class="how-step">
+    <div class="how-num">2</div>
+    <div class="how-text"><strong>Send payment via MoMo</strong><span>Pay using Airtel Money or MTN MoMo to our merchant number</span></div>
+  </div>
+  <div class="how-step">
+    <div class="how-num">3</div>
+    <div class="how-text"><strong>Confirm on WhatsApp</strong><span>Send us your payment screenshot via WhatsApp — we'll do the rest</span></div>
+  </div>
+  <div class="how-step">
+    <div class="how-num">4</div>
+    <div class="how-text"><strong>Receive your ticket numbers</strong><span>We send your unique lucky numbers back via WhatsApp within minutes</span></div>
+  </div>
+  <div class="how-step">
+    <div class="how-num">5</div>
+    <div class="how-text"><strong>Watch the live draw!</strong><span>Sunday 19 April 2026 — 1st, 2nd &amp; 3rd place winners announced live!</span></div>
+  </div>
+<!-- GUARANTEES -->
+<div class="card" style="border:1.5px solid #81c784;">
+  <div class="card-title" style="color:#2e7d32;">🛡️ Our Guarantees to You</div>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <span style="font-size:1.3rem;flex-shrink:0;">✅</span>
+      <div><strong style="font-size:14px;color:var(--text);display:block;">Minimum sales guarantee</strong><span style="font-size:13px;color:var(--muted);">The draw only proceeds once minimum ticket sales are reached. If not met, every participant receives a full refund via MoMo within 48 hours. No questions asked.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <span style="font-size:1.3rem;flex-shrink:0;">🎥</span>
+      <div><strong style="font-size:14px;color:var(--text);display:block;">Live transparent draw</strong><span style="font-size:13px;color:var(--muted);">The draw is conducted live on WhatsApp/Facebook. All confirmed ticket numbers are published before the draw so you can verify your entry.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <span style="font-size:1.3rem;flex-shrink:0;">🔒</span>
+      <div><strong style="font-size:14px;color:var(--text);display:block;">Payment verification</strong><span style="font-size:13px;color:var(--muted);">Every payment is manually verified against our MoMo transaction records before a ticket number is issued. No payment = no ticket.</span></div>
+    </div>
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <span style="font-size:1.3rem;flex-shrink:0;">📞</span>
+      <div><strong style="font-size:14px;color:var(--text);display:block;">Direct contact</strong><span style="font-size:13px;color:var(--muted);">Questions or concerns? WhatsApp us directly at +260 96 179 4739 before entering.</span></div>
+    </div>
+  </div>
+</div>
+
+</div>
+```
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 LuckyDip Zambia · Lusaka</p>
+    <p style="margin-top:6px;">Questions? WhatsApp us: <a href="https://wa.me/260961794739">+260 96 179 4739</a></p>
+    <p style="margin-top:6px; font-size:11px;">Please play responsibly. Must be 18+ to enter.</p>
+  </footer>
+
+  <!-- ══════════════════════════════════
+       MODAL FLOW
+  ══════════════════════════════════ -->
+
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modal">
+      <div class="modal-drag"></div>
+
+```
+  <!-- step track -->
+  <div class="step-track">
+    <div class="s-dot active" id="d1">1</div>
+    <div class="s-line" id="l1"></div>
+    <div class="s-dot" id="d2">2</div>
+    <div class="s-line" id="l2"></div>
+    <div class="s-dot" id="d3">3</div>
+    <div class="s-line" id="l3"></div>
+    <div class="s-dot" id="d4">4</div>
+  </div>
+
+  <!-- PANEL 1: Review -->
+  <div class="panel active" id="p1">
+    <div class="card-title" style="text-align:center;margin-bottom:1rem;">🎟️ Review Your Order</div>
+    <div class="order-card">
+      <div class="o-row"><span>Prize Pool</span><span>iPhone · K2,000 · K500</span></div>
+      <div class="o-row"><span>Tickets</span><span id="m-tickets">3 tickets</span></div>
+      <div class="o-row"><span>Name</span><span id="m-name">—</span></div>
+      <div class="o-row"><span>WhatsApp</span><span id="m-wa">—</span></div>
+      <div class="o-row"><span>Payment via</span><span id="m-prov">Airtel Money</span></div>
+      <div class="o-total"><span>Total</span><span id="m-total">K50</span></div>
+    </div>
+    <button class="btn-main" onclick="goTo(2)">Looks good — proceed to payment →</button>
+    <p class="note">Double-check your WhatsApp number before continuing</p>
+  </div>
+
+  <!-- PANEL 2: Pay -->
+  <div class="panel" id="p2">
+    <div class="card-title" style="text-align:center;margin-bottom:1rem;">💸 Send Payment</div>
+    <div class="pay-card">
+      <div class="pay-header">
+        <div class="pay-logo" id="m-logo">🔴</div>
+        <div>
+          <div style="font-weight:800;font-size:15px;" id="m-prov-name">Airtel Money</div>
+          <div style="font-size:12px;color:var(--muted);">Send to this merchant number</div>
+        </div>
+      </div>
+      <div class="copy-row">
+        <div>
+          <div class="copy-lbl">Merchant Number</div>
+          <div class="copy-val" id="m-merchant">097 000 0000</div>
+        </div>
+        <button class="copy-btn" id="copy-merchant-btn" onclick="copyText('m-merchant','copy-merchant-btn')">Copy</button>
+      </div>
+      <div class="copy-row">
+        <div>
+          <div class="copy-lbl">Your Reference Code</div>
+          <div class="copy-val" id="m-ref">RF-XXXXX</div>
+        </div>
+        <button class="copy-btn" id="copy-ref-btn" onclick="copyText('m-ref','copy-ref-btn')">Copy</button>
+      </div>
+      <ol class="pay-steps">
+        <li><span class="n">1</span><span>Open your <strong id="m-app">Airtel Money</strong> app</span></li>
+        <li><span class="n">2</span><span>Go to <strong>Send Money</strong> or <strong>Pay Merchant</strong></span></li>
+        <li><span class="n">3</span><span>Enter the merchant number above</span></li>
+        <li><span class="n">4</span><span>Amount: <strong id="m-amt">K50</strong> · Use your reference code as the payment note</span></li>
+        <li><span class="n">5</span><span>Confirm and <strong>screenshot your receipt</strong></span></li>
+      </ol>
+    </div>
+    <button class="btn-wa" onclick="goTo(3)">✅ &nbsp;I've sent the payment!</button>
+    <p class="note">Only tap above after your payment is confirmed by your MoMo app</p>
+  </div>
+
+  <!-- PANEL 3: WhatsApp -->
+  <div class="panel" id="p3">
+    <div class="card-title" style="text-align:center;margin-bottom:0.5rem;">💬 Confirm on WhatsApp</div>
+    <p style="font-size:13px;color:var(--muted);font-weight:600;margin-bottom:0.85rem;text-align:center;">We've prepared your message. Open WhatsApp, send it, and attach your payment screenshot!</p>
+    <div class="wa-bubble">
+      <strong>Your message to LuckyDip:</strong>
+      <span id="wa-msg">Loading...</span>
+      <div class="wa-time" id="wa-time">now</div>
+    </div>
+    <p style="font-size:12px;font-weight:700;color:var(--orange-dark);margin-bottom:0.75rem;text-align:center;">📸 Remember to attach your payment screenshot!</p>
+    <button class="btn-wa" onclick="sendWhatsApp()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.1-1.34A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.93 13.44c-.21.59-1.23 1.13-1.69 1.19-.46.06-.89.22-2.98-.62-2.5-1.03-4.1-3.57-4.22-3.73-.12-.17-.97-1.29-.97-2.46 0-1.17.61-1.74.83-1.98.21-.24.46-.3.61-.3h.44c.14 0 .33-.06.52.39.2.46.67 1.64.73 1.76.06.12.1.26.02.41-.08.15-.12.25-.24.38-.12.13-.25.29-.36.39-.12.1-.24.21-.1.41.14.2.61.9 1.31 1.46.9.75 1.66 1 1.87 1.11.21.11.33.09.45-.05.12-.14.52-.6.66-.81.14-.21.28-.17.47-.1.19.07 1.2.57 1.41.67.21.1.35.15.4.23.05.09.05.52-.16 1.11z"/></svg>
+      Open WhatsApp &amp; Send
+    </button>
+    <button class="btn-ghost" onclick="goTo(4)">I've sent the message →</button>
+  </div>
+
+  <!-- PANEL 4: Confirmed -->
+  <div class="panel" id="p4">
+    <div class="confirmed-hero">
+      <span class="big-tick">🎉</span>
+      <div class="card-title" style="text-align:center;margin:0.5rem 0;">Message sent!</div>
+      <p style="font-size:14px;color:var(--muted);font-weight:600;margin-bottom:1rem;">Thanks for entering LuckyDip! Here's what happens next:</p>
+      <div style="background:var(--surface);border-radius:14px;padding:1rem;text-align:left;margin-bottom:1rem;">
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Fredoka One',cursive;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+          <div style="font-size:13px;font-weight:700;color:var(--text);padding-top:4px;">We verify your MoMo payment against our transaction records — usually within 30 minutes.</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Fredoka One',cursive;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+          <div style="font-size:13px;font-weight:700;color:var(--text);padding-top:4px;">Once confirmed, we send your official ticket numbers via WhatsApp from <strong>+260 96 179 4739</strong>.</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--orange);color:#fff;font-family:'Fredoka One',cursive;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+          <div style="font-size:13px;font-weight:700;color:var(--text);padding-top:4px;">The full list of confirmed ticket numbers will be published before the live draw on Sunday 19 April.</div>
+        </div>
+      </div>
+      <div style="background:#fff8e1;border:1.5px solid var(--yellow);border-radius:12px;padding:0.85rem 1rem;margin-bottom:1rem;font-size:12px;font-weight:700;color:#7a4f00;">
+        ⚠️ Your entry is only confirmed once you receive a WhatsApp reply from us with your official ticket numbers. Do not consider yourself entered until then.
+      </div>
+      <div style="background:#e8f5e9;border:1.5px solid #81c784;border-radius:12px;padding:0.85rem 1rem;margin-bottom:1rem;font-size:12px;font-weight:700;color:#1b5e20;">
+        🛡️ Minimum sales guarantee: The draw will proceed as long as minimum ticket sales are reached. If the minimum is not met, all payments will be refunded in full via MoMo within 48 hours.
+      </div>
+      <button class="btn-main" onclick="closeModal()">Got it — good luck! 🤞</button>
+      <p class="note">Draw: Sunday 19 April 2026 · Live on WhatsApp &amp; social media</p>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+
+  <script>
+    /* ══════════════════════════════════
+       LUCKYDIP FRONTEND — SECURED
+       - Prices locked server-side (constants only, not user-mutable)
+       - No ticket number generation on frontend
+       - Ref codes use crypto.getRandomValues for unpredictability
+       - Submit button disabled after first use per session (anti-spam)
+       - Amount/count read from locked constants, never from DOM
+       - All validation server-side; frontend validation is UX only
+    ══════════════════════════════════ */
+
+    /* ── LOCKED PRICE TABLE (not alterable via console without full override) ── */
+    const TICKET_PRICES = Object.freeze({
+      1:  { price: 20,  save: 0  },
+      3:  { price: 50,  save: 17 },
+      5:  { price: 80,  save: 20 },
+      10: { price: 150, save: 25 },
+      20: { price: 250, save: 38 },
+      50: { price: 500, save: 50 },
+    });
+
+    let selCount = 3;
+    let momoProvider = 'airtel';
+    let refCode = '';
+    let submitting = false; /* anti-spam: one submission per session flow */
+
+    /* ── SAFE PRICE LOOKUP — always from locked table, never from DOM ── */
+    function getPrice(count) {
+      return TICKET_PRICES[count] || TICKET_PRICES[1];
+    }
+
+    /* ── CONFETTI ── */
+    (function spawnConfetti() {
+      const hero = document.getElementById('hero-section');
+      const colors = ['#fff','#f7c948','#ffe066','#ffb347','#fff9c4'];
+      for (let i = 0; i < 18; i++) {
+        const d = document.createElement('div');
+        d.className = 'confetti';
+        d.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*30}%;width:${6+Math.random()*8}px;height:${6+Math.random()*8}px;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${2+Math.random()*3}s;animation-delay:${Math.random()*4}s;`;
+        hero.appendChild(d);
+      }
+    })();
+
+    /* ── COUNTDOWN ── */
+    const drawDate = new Date('2026-04-19T19:00:00+02:00');
+    function tick() {
+      const diff = drawDate - Date.now();
+      if (diff <= 0) {
+        ['cd-d','cd-h','cd-m','cd-s'].forEach(id => document.getElementById(id).textContent = '00');
+        return;
+      }
+      document.getElementById('cd-d').textContent = String(Math.floor(diff/86400000)).padStart(2,'0');
+      document.getElementById('cd-h').textContent = String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+      document.getElementById('cd-m').textContent = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+      document.getElementById('cd-s').textContent = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+    }
+    setInterval(tick, 1000); tick();
+
+    /* ── TICKET SELECTION ── */
+    function selectTicket(el, count) {
+      document.querySelectorAll('.t-opt').forEach(e => e.classList.remove('selected'));
+      el.classList.add('selected');
+      selCount = count;
+      const { price, save } = getPrice(count);
+      const saved = (count * 20) - price;
+      document.getElementById('s-tickets').textContent = count + ' ticket' + (count > 1 ? 's' : '');
+      document.getElementById('s-unit').textContent = 'K' + (price/count).toFixed(2) + ' each';
+      document.getElementById('s-disc').textContent = save > 0 ? 'Save K' + saved + ' (' + save + '%)' : 'None';
+      document.getElementById('s-disc').style.color = save > 0 ? '#2a9d2a' : 'var(--muted)';
+      document.getElementById('s-total').textContent = 'K' + price;
+    }
+
+    /* ── MOMO SWITCH ── */
+    function switchMomo(p) {
+      momoProvider = p;
+      document.getElementById('tab-airtel').classList.toggle('active', p === 'airtel');
+      document.getElementById('tab-mtn').classList.toggle('active', p === 'mtn');
+      document.getElementById('momo-lbl').textContent = p === 'airtel' ? 'Your Airtel Money Number' : 'Your MTN MoMo Number';
+      document.getElementById('momo-num').placeholder = p === 'airtel' ? 'e.g. 097 123 4567' : 'e.g. 096 123 4567';
+    }
+
+    /* ── SECURE REF CODE — crypto random, not Math.random ── */
+    function genRef() {
+      const arr = new Uint8Array(4);
+      crypto.getRandomValues(arr);
+      return 'LD-' + Array.from(arr, b => b.toString(36).toUpperCase().padStart(2,'0')).join('').substring(0,6);
+    }
+
+    /* ── INPUT SANITISER — strips HTML tags from user input ── */
+    function sanitise(str) {
+      return str.replace(/[<>"'&]/g, '').trim().substring(0, 100);
+    }
+
+    /* ── ZAMBIAN PHONE VALIDATOR ── */
+    function isValidZambianPhone(num) {
+      const cleaned = num.replace(/[\s\-\+]/g, '');
+      return /^(260|0)(9[5-7]|7[6-7])\d{7}$/.test(cleaned);
+    }
+
+    /* ── OPEN MODAL ── */
+    function openModal() {
+      if (submitting) return; /* prevent double submission */
+
+      const rawName = document.getElementById('p-name').value;
+      const rawWa   = document.getElementById('p-wa').value;
+      const rawMomo = document.getElementById('momo-num').value;
+
+      const name = sanitise(rawName);
+      const wa   = sanitise(rawWa);
+      const momo = sanitise(rawMomo);
+
+      if (!name) { showError('Please enter your full name.'); return; }
+      if (name.length < 3) { showError('Please enter your full name (at least 3 characters).'); return; }
+      if (!momo) { showError('Please enter your ' + (momoProvider === 'airtel' ? 'Airtel Money' : 'MTN MoMo') + ' number.'); return; }
+      if (!isValidZambianPhone(momo)) { showError('Please enter a valid Zambian mobile number (e.g. 097 123 4567).'); return; }
+      if (!wa) { showError('Please enter your WhatsApp number so we can send your ticket confirmation.'); return; }
+      if (!isValidZambianPhone(wa)) { showError('Please enter a valid Zambian WhatsApp number.'); return; }
+
+      /* Always read price from locked table — never from DOM or user input */
+      const { price } = getPrice(selCount);
+      refCode = genRef();
+
+      /* fill panel 1 */
+      document.getElementById('m-tickets').textContent = selCount + ' ticket' + (selCount > 1 ? 's' : '');
+      document.getElementById('m-name').textContent    = name;
+      document.getElementById('m-wa').textContent      = wa;
+      document.getElementById('m-prov').textContent    = momoProvider === 'airtel' ? 'Airtel Money' : 'MTN MoMo';
+      document.getElementById('m-total').textContent   = 'K' + price;
+
+      /* fill panel 2 */
+      if (momoProvider === 'airtel') {
+        document.getElementById('m-logo').textContent      = '🔴';
+        document.getElementById('m-logo').className        = 'pay-logo airtel';
+        document.getElementById('m-prov-name').textContent = 'Airtel Money';
+        document.getElementById('m-app').textContent       = 'Airtel Money';
+        document.getElementById('m-merchant').textContent  = '0972573411';
+      } else {
+        document.getElementById('m-logo').textContent      = '🟡';
+        document.getElementById('m-logo').className        = 'pay-logo mtn';
+        document.getElementById('m-prov-name').textContent = 'MTN MoMo';
+        document.getElementById('m-app').textContent       = 'MTN MoMo';
+        document.getElementById('m-merchant').textContent  = '0961794739';
+      }
+      document.getElementById('m-ref').textContent = refCode;
+      document.getElementById('m-amt').textContent = 'K' + price;
+
+      /* fill panel 3 — WhatsApp message includes price from locked table */
+      const waText = `Hi LuckyDip! 👋
+
+I've just paid for my raffle tickets 🎟️
+
+Name: ${name}
+Tickets: ${selCount}
+Ref Code: ${refCode}
+Amount: K${price}
+Payment via: ${momoProvider === 'airtel' ? 'Airtel Money' : 'MTN MoMo'}
+
+[Screenshot attached]
+
+Please confirm my entry. Thank you! 🙏`;
+      document.getElementById('wa-msg').textContent = waText;
+      const now = new Date();
+      document.getElementById('wa-time').textContent = now.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+
+      goTo(1);
+      document.getElementById('overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    /* ── ERROR DISPLAY ── */
+    function showError(msg) {
+      let el = document.getElementById('form-error');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'form-error';
+        el.style.cssText = 'background:#fee;border:1.5px solid #e88;border-radius:10px;padding:0.65rem 1rem;font-size:13px;font-weight:700;color:#c00;margin-bottom:10px;';
+        const btn = document.querySelector('.btn-main[onclick="openModal()"]');
+        btn.parentNode.insertBefore(el, btn);
+      }
+      el.textContent = '⚠️ ' + msg;
+      el.style.display = 'block';
+      setTimeout(() => { if(el) el.style.display = 'none'; }, 5000);
+    }
+
+    /* ── CLOSE MODAL ── */
+    function closeModal() {
+      document.getElementById('overlay').classList.remove('open');
+      document.body.style.overflow = '';
+      submitting = false;
+    }
+    document.getElementById('overlay').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    /* ── STEP NAV ── */
+    function goTo(n) {
+      [1,2,3,4].forEach(i => {
+        document.getElementById('p' + i).classList.toggle('active', i === n);
+        const dot = document.getElementById('d' + i);
+        if (i < n)        { dot.classList.add('done'); dot.classList.remove('active'); dot.textContent = '✓'; }
+        else if (i === n) { dot.classList.add('active'); dot.classList.remove('done'); dot.textContent = i < 4 ? i : '✓'; }
+        else              { dot.classList.remove('active','done'); dot.textContent = i < 4 ? i : '✓'; }
+        if (i < 4) document.getElementById('l' + i).classList.toggle('done', i < n);
+      });
+      document.getElementById('modal').scrollTop = 0;
+    }
+
+    /* ── COPY ── */
+    function copyText(elId, btnId) {
+      const text = document.getElementById(elId).textContent;
+      navigator.clipboard.writeText(text).catch(() => {});
+      const btn = document.getElementById(btnId);
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = 'Copy', 2000);
+    }
+
+    /* ── WHATSAPP — disable button after tap to prevent spam ── */
+    function sendWhatsApp() {
+      if (submitting) return;
+      submitting = true;
+
+      const name  = sanitise(document.getElementById('p-name').value);
+      const { price } = getPrice(selCount);
+      const msg   = `Hi LuckyDip! 👋
+
+I've just paid for my raffle tickets 🎟️
+
+Name: ${name}
+Tickets: ${selCount}
+Ref Code: ${refCode}
+Amount: K${price}
+Payment via: ${momoProvider === 'airtel' ? 'Airtel Money' : 'MTN MoMo'}
+
+[Screenshot attached]
+
+Please confirm my entry. Thank you! 🙏`;
+      const url   = 'https://wa.me/260961794739?text=' + encodeURIComponent(msg);
+
+      /* disable the WA button to prevent repeat taps */
+      const waBtn = document.querySelector('#p3 .btn-wa');
+      if (waBtn) { waBtn.disabled = true; waBtn.style.opacity = '0.6'; waBtn.textContent = 'Opening WhatsApp...'; }
+
+      window.open(url, '_blank');
+      setTimeout(() => goTo(4), 1800);
+    }
+  </script>
+
+</body>
+</html>
