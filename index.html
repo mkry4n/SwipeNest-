@@ -319,6 +319,41 @@ section{padding:80px 5%}
 .bname{font-size:13px;font-weight:700}
 .bdesc{font-size:12px;color:#8A8278;line-height:1.5}
 
+/* ── PRICING ── */
+#pricing{background:#131F1A;padding:80px 5%}
+.pricing-inner{max-width:960px;margin:0 auto}
+.pricing-grid{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;gap:16px;margin-top:48px}
+@media(min-width:700px){.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}}
+.price-card{border-radius:20px;padding:28px;position:relative;overflow:hidden;-webkit-transition:transform 0.2s;transition:transform 0.2s}
+.price-card:hover{-webkit-transform:translateY(-4px);transform:translateY(-4px)}
+.price-card.free{background:rgba(250,248,244,0.04);border:1px solid rgba(250,248,244,0.09)}
+.price-card.agent{background:rgba(196,98,58,0.08);border:1.5px solid rgba(196,98,58,0.3)}
+.price-card.pro{background:rgba(212,168,67,0.06);border:1.5px solid rgba(212,168,67,0.25)}
+.price-card.agent::before{content:‘MOST POPULAR’;position:absolute;top:14px;right:14px;font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(–tc);background:rgba(196,98,58,0.15);border-radius:20px;padding:4px 10px}
+.price-tier{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.price-card.free .price-tier{color:rgba(250,248,244,0.4)}
+.price-card.agent .price-tier{color:#E8855C}
+.price-card.pro .price-tier{color:var(–gold)}
+.price-name{font-family:Georgia,serif;font-size:22px;font-weight:700;color:#FAF8F4;margin-bottom:6px}
+.price-amount{font-family:Georgia,serif;font-size:36px;font-weight:700;color:#FAF8F4;line-height:1;margin-bottom:4px}
+.price-amount span{font-size:14px;font-weight:400;color:rgba(250,248,244,0.4);font-family:-apple-system,sans-serif}
+.price-note{font-size:12px;color:rgba(250,248,244,0.35);margin-bottom:20px;min-height:18px}
+.price-divider{height:1px;background:rgba(250,248,244,0.08);margin-bottom:18px}
+.price-features{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;gap:10px}
+.pf{display:-webkit-flex;display:flex;gap:10px;-webkit-align-items:flex-start;align-items:flex-start}
+.pf-dot{width:18px;height:18px;border-radius:50%;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:10px;-webkit-flex-shrink:0;flex-shrink:0;margin-top:1px}
+.price-card.free .pf-dot{background:rgba(250,248,244,0.08);color:rgba(250,248,244,0.4)}
+.price-card.agent .pf-dot{background:rgba(196,98,58,0.15);color:#E8855C}
+.price-card.pro .pf-dot{background:rgba(212,168,67,0.12);color:var(–gold)}
+.pf-text{font-size:13px;color:rgba(250,248,244,0.6);line-height:1.5}
+.price-cta{margin-top:22px;width:100%;padding:13px;border-radius:13px;font-size:14px;font-weight:700;cursor:pointer;border:none;font-family:-apple-system,sans-serif;-webkit-appearance:none;text-align:center;display:block;text-decoration:none!important}
+.price-card.free .price-cta{background:rgba(250,248,244,0.08);color:rgba(250,248,244,0.7)!important;-webkit-text-fill-color:rgba(250,248,244,0.7);border:1.5px solid rgba(250,248,244,0.12)}
+.price-card.agent .price-cta{background:#C4623A;color:white!important;-webkit-text-fill-color:white;box-shadow:0 6px 20px rgba(196,98,58,0.32)}
+.price-card.pro .price-cta{background:rgba(212,168,67,0.15);color:#D4A843!important;-webkit-text-fill-color:#D4A843;border:1.5px solid rgba(212,168,67,0.3)}
+.founding-note{text-align:center;margin-top:28px;padding:18px 24px;background:rgba(196,98,58,0.08);border:1px solid rgba(196,98,58,0.2);border-radius:14px}
+.founding-note p{font-size:13px;color:rgba(250,248,244,0.55);line-height:1.6}
+.founding-note strong{color:#E8855C;font-weight:600}
+
 /* ── OFFER ── */
 #offer{background:#110E0C;position:relative;overflow:hidden}
 #offer::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 500px 400px at 0% 50%,rgba(196,98,58,0.1) 0%,transparent 60%);pointer-events:none}
@@ -442,6 +477,7 @@ footer p{font-size:11px;color:rgba(250,248,244,0.25)}
   <a class="nav-logo" href="#">Swipe<span>Nest</span></a>
   <div class="nav-links">
     <a href="#cats" class="nav-hide">What we offer</a>
+    <a href="#pricing" class="nav-hide">Pricing</a>
     <a href="#agents" class="nav-hide">For agents</a>
     <a href="#offer" class="nav-cta">Join as Founding Agent</a>
   </div>
@@ -645,13 +681,85 @@ footer p{font-size:11px;color:rgba(250,248,244,0.25)}
   </div>
 </section>
 
+<!-- PRICING -->
+
+<section id="pricing" style="background:#131F1A">
+  <div class="pricing-inner">
+    <div class="r"><div class="eyebrow" style="color:rgba(196,98,58,0.75)">Pricing</div></div>
+    <h2 class="sec-h r d1" style="color:#FAF8F4">Simple, transparent<br><em>pricing.</em></h2>
+    <p class="sec-sub r d2" style="color:rgba(250,248,244,0.4)">Start free. Grow into the tools you need. Founding agents lock in a discounted rate for life.</p>
+    <div class="pricing-grid">
+
+```
+  <!-- FREE / TENANT -->
+  <div class="price-card free r">
+    <div class="price-tier">For Tenants</div>
+    <div class="price-name">SwipeNest</div>
+    <div class="price-amount">N$0<span>/forever</span></div>
+    <div class="price-note">Always free for tenants</div>
+    <div class="price-divider"></div>
+    <div class="price-features">
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Swipe through all listings</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Long-term, short-term &amp; sales</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">NestMate flatmate matching</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Direct agent chat</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Tenant profile &amp; ratings</div></div>
+    </div>
+    <a href="#offer" class="price-cta">Get Started Free</a>
+  </div>
+
+  <!-- AGENT -->
+  <div class="price-card agent r d1">
+    <div class="price-tier">For Agents &amp; Landlords</div>
+    <div class="price-name">SwipeNest Agent</div>
+    <div class="price-amount">N$450<span>/mo</span></div>
+    <div class="price-note" style="color:#E8855C">Free for first 3 months</div>
+    <div class="price-divider"></div>
+    <div class="price-features">
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Unlimited listings across all categories</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Verified agent badge on every card</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Live swipe analytics per listing</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Direct tenant chat &amp; profiles</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Client pipeline &amp; viewing management</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Founding agents lock in discounted rate</div></div>
+    </div>
+    <a href="#offer" class="price-cta">Join as Founding Agent</a>
+  </div>
+
+  <!-- PRO -->
+  <div class="price-card pro r d2">
+    <div class="price-tier">For Agencies &amp; Property Managers</div>
+    <div class="price-name">SwipeNest Pro</div>
+    <div class="price-amount">N$1,500<span>/mo</span></div>
+    <div class="price-note" style="color:rgba(212,168,67,0.7)">Coming soon · Join waitlist</div>
+    <div class="price-divider"></div>
+    <div class="price-features">
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Everything in Agent tier</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Full property management dashboard</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Lease tracking &amp; renewal alerts</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Payment monitoring &amp; reminders</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Multi-agent portfolio dashboard</div></div>
+      <div class="pf"><div class="pf-dot">✓</div><div class="pf-text">Premier Agency badge included</div></div>
+    </div>
+    <a href="#offer" class="price-cta">Join Pro Waitlist</a>
+  </div>
+
+</div>
+<div class="founding-note r">
+  <p><strong>Founding agent offer:</strong> Sign up before launch and your N$450/month rate is locked in for life — even when we raise prices. The first 3 months are completely free with no credit card required.</p>
+</div>
+```
+
+  </div>
+</section>
+
 <!-- FOUNDING OFFER -->
 
 <section id="offer">
   <div class="offer-inner">
     <div class="offer-tag r">★ Founding Partner Offer</div>
     <h2 class="offer-h r d1">List free.<br><em>Lead the market.</em></h2>
-    <p class="offer-sub r d2">A limited number of founding agent spots are open in Windhoek right now — across all three listing categories. Get live in 24 hours at no cost.</p>
+    <p class="offer-sub r d2">A limited number of founding agent spots are open in Windhoek right now. Get listed across all three categories, lock in your N$450/month rate for life, and go live in 24 hours — at no cost for 3 months.</p>
     <div class="offer-perks r d2">
       <div class="op"><div class="op-val">Free</div><div class="op-lbl">3 months unlimited listings</div></div>
       <div class="op"><div class="op-val">Gold</div><div class="op-lbl">Premier badge included</div></div>
